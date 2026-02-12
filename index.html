@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CompostaLab | Tienda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css".css">
+</head>
+
+<body class="bg-light">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">🌱 CompostaLab</a>
+
+    <div class="ms-auto d-flex align-items-center gap-3 text-white">
+     
+        <button class="btn btn-link text-white position-relative p-0"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#cartCanvas"
+        aria-label="Abrir carrito">
+
+        🛒
+
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+            2
+        </span>
+        </button>
+    </div>
+  </div>
+</nav>
+<!-- ================= OFFCANVAS CARRITO ================= -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartCanvas">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">🛒 Tu carrito</h5>
+    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body d-flex flex-column">
+
+    <!-- PRODUCTOS -->
+    <ul class="list-group mb-3">
+
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div>
+          <strong>Composta Orgánica 5 kg</strong>
+          <div class="small text-muted">$50 MXN</div>
+        </div>
+        <span class="badge bg-success">✔</span>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div>
+          <strong>Composta Premium 15 kg</strong>
+          <div class="small text-muted">$120 MXN</div>
+        </div>
+        <span class="badge bg-warning text-dark">⏳</span>
+      </li>
+
+    </ul>
+
+    <!-- TOTAL -->
+    <div class="mt-auto">
+      <hr>
+
+      <h5 class="mb-3">
+        Total estimado:
+        <strong>$170 MXN</strong>
+      </h5>
+
+      <!-- BOTÓN COMPRA -->
+      <button class="btn btn-success w-100 mb-2">
+        Finalizar compra
+      </button>
+
+      <!-- ESTADO PROCESANDO -->
+      <button class="btn btn-success w-100 mb-2 disabled">
+        <span class="spinner-border spinner-border-sm me-2"></span>
+        Procesando pago...
+      </button>
+
+      <!-- ESTADO ÉXITO -->
+      <div class="alert alert-success text-center mt-2 mb-0">
+        ✔ Compra realizada con éxito
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- ================= HERO ================= -->
+<section class="py-5 bg-success text-white text-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Composta orgánica de alta calidad</h1>
+    <p class="lead">Mejora tu suelo, cultivos y jardines de forma sostenible</p>
+      <div class="d-flex justify-content-center gap-3 mt-3 flex-wrap">
+        <a href="#productos" class="btn btn-light btn-lg">
+          Ver productos
+        </a>
+
+        <a href="sobre-nosotros.html" class="btn btn-outline-light btn-lg">
+          Sobre nosotros
+        </a>
+      </div>
+  </div>
+</section>
+
+<!-- ================= ALERT ================= -->
+<div class="container mt-4">
+    <div class="alert alert-warning alert-dismissible fade show"> ⚠️ Pagina web en mantenimiento 
+        <button class="btn-close" data-bs-dismiss="alert"></button> 
+    </div> 
+</div>
+
+<!-- ================= CAROUSEL ================= -->
+<section class="container my-5">
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner rounded shadow">
+
+      <div class="carousel-item active">
+        <img src="./img/20260112_135949.jpg" class="d-block w-100">
+      </div>
+
+      <div class="carousel-item">
+        <img src="./img/20260112_140017.jpg" class="d-block w-100">
+      </div>
+
+      <div class="carousel-item">
+        <img src="./img/20260112_140005.jpg" class="d-block w-100">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="container my-5">
+
+<!-- ================= PRODUCTOS ================= -->
+<section id="productos" class="container my-5">
+  <h2 class="mb-4 text-center">Bolsas de Composta</h2>
+
+  <div class="row g-4">
+
+    <!-- PRODUCTO -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="./img/5kg.webp" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Composta Orgánica 5 kg</h5>
+          <p class="card-text">Ideal para huertos y jardines.</p>
+          <p class="fw-bold">$50 MXN</p>
+
+          <!-- BOTONES -->
+          <div class="d-grid gap-2">
+            <button class="btn btn-outline-success">
+              Agregar al carrito
+            </button>
+
+            <button class="btn btn-success">
+              <span class="spinner-border spinner-border-sm me-2"></span>
+              Procesando compra...
+            </button>
+
+            <div class="text-success fw-semibold text-center">
+              ✔ ¡Listo! Agregado al carrito
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCTO -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="./img/15kg.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Composta Premium 15 kg</h5>
+          <p class="card-text">Mayor concentración de nutrientes.</p>
+          <p class="fw-bold">$120 MXN</p>
+
+          <div class="d-grid gap-2">
+            <button class="btn btn-outline-success">Agregar al carrito</button>
+            <button class="btn btn-success">Comprar ahora</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCTO -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="./img/compost2.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text">Ultra fina. 5kg-Perfecta para interiores.</p>
+          <p class="fw-bold">$80 MXN</p>
+
+          <div class="d-grid gap-2">
+            <button class="btn btn-outline-success">Agregar al carrito</button>
+            <button class="btn btn-success">Comprar ahora</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="container my-5">
+
+<!-- ================= FAQ ================= -->
+<section class="container my-5">
+  <h2 class="mb-3">Preguntas frecuentes</h2>
+
+  <div class="accordion">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
+          ¿Es 100% orgánica?
+        </button>
+      </h2>
+      <div id="faq1" class="accordion-collapse collapse show">
+        <div class="accordion-body">
+          Sí, está elaborada con residuos orgánicos obtenidos de la cafeteria universitaria.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+          ¿Tiene envío?
+        </button>
+      </h2>
+      <div id="faq2" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          Realizamos envíos unicamente locales, en la ciudad de Toluca de Lerdo, Edo.Mex.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+    <p class="mb-1">© 2026 CompostaLab</p>
+    <small>Producción y venta de composta orgánica</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
